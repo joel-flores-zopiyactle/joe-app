@@ -1,0 +1,20 @@
+<section class="container d-flex justify-content-center align-items-center">
+
+    <div class="wrapper">
+        <div class="progress-container">
+            <ul class="progress-list">
+                <li *ngFor="let step of stepsLabels; let i = index;" [class]="step.isActive ? 'active': ''">
+                    {{step.label}}
+                </li>
+            </ul>
+        </div>
+
+        <div class="py-5 d-flex justify-content-center">
+            <button class="btn btn-primary px-5 me-5" (click)="onHandlePrev()">Prev</button>
+            <button class="btn btn-primary px-5" (click)="onHandleNext()">Next</button>
+        </div>
+
+
+    </div>
+
+</section>
